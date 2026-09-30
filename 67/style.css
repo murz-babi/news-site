@@ -1,0 +1,513 @@
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    color: #222;
+    background: #f3f4f6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    min-height: 80px;
+    padding: 15px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    background: #111;
+}
+
+
+/* Логотип */
+
+.logo {
+    color: white;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: #ff6b35;
+    transform: scale(1.05);
+}
+
+
+/* Меню */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.menu a {
+    position: relative;
+
+    padding: 10px 14px;
+
+    color: #ddd;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: white;
+    background: #292929;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ПОИСК
+========================= */
+
+.search {
+    display: flex;
+    align-items: center;
+
+    height: 42px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3);
+}
+
+.search input {
+    width: 170px;
+
+    padding: 10px 14px;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+}
+
+.search button {
+    width: 45px;
+    height: 42px;
+
+    border: none;
+
+    background: #ff6b35;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background: #e95420;
+}
+
+
+/* =========================
+   КНОПКА ВОЙТИ
+========================= */
+
+.login-button {
+    padding: 11px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ff6b35;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #e95420;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(255, 107, 53, 0.35);
+}
+
+
+/* =========================
+   ОСНОВНАЯ СТРУКТУРА
+========================= */
+
+.content {
+    display: grid;
+
+    grid-template-columns: 3fr 1fr;
+
+    gap: 25px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 35px 50px;
+}
+
+
+/* =========================
+   НОВОСТИ
+========================= */
+
+.news {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-rows: auto auto auto;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   КАРТОЧКА НОВОСТИ
+========================= */
+
+.news-card {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Изображение */
+
+.news-card img {
+    display: block;
+
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+/* Текст новости */
+
+.news-info {
+    padding: 20px;
+}
+
+.news-info h1,
+.news-info h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.news-info h1 {
+    font-size: 32px;
+}
+
+.news-info h2 {
+    font-size: 21px;
+}
+
+.news-info p {
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* Категория */
+
+.category {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: #ff6b35;
+    color: white;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.date {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+/* Кнопка новости */
+
+.news-info button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #111;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.news-info button:hover {
+    background: #ff6b35;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ГЛАВНАЯ НОВОСТЬ
+========================= */
+
+.main-news {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    position: relative;
+}
+
+.main-news img {
+    height: 350px;
+}
+
+.main-news .news-info {
+    padding: 25px;
+}
+
+.main-news h1 {
+    font-size: 36px;
+}
+
+
+/* =========================
+   ПОПУЛЯРНЫЕ НОВОСТИ
+========================= */
+
+.sidebar {
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+
+    font-size: 24px;
+}
+
+
+/* Одна популярная новость */
+
+.popular-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    transition: 0.3s;
+}
+
+.popular-item:last-child {
+    border-bottom: none;
+}
+
+.popular-item:hover {
+    transform: translateX(5px);
+}
+
+.popular-item span {
+    min-width: 32px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #ff6b35;
+}
+
+.popular-item p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 30px;
+
+    background: #111;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ПЛАНШЕТ
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+    .news {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-news {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .main-news img {
+        height: 250px;
+    }
+
+}
+
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 15px;
+
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .menu {
+        gap: 3px;
+    }
+
+    .menu a {
+        padding: 8px 9px;
+
+        font-size: 14px;
+    }
+
+    .news {
+        grid-template-columns: 1fr;
+    }
+
+    .main-news {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .main-news h1 {
+        font-size: 27px;
+    }
+
+    .news-card img {
+        height: 180px;
+    }
+
+}
